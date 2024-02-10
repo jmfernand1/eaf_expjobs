@@ -150,7 +150,7 @@ from torch.utils.data import DataLoader
 
 def train_and_log(config,experiment_id='99'):
     with wandb.init(
-        project="MLOps-Pycon2023", 
+        project="Eafit-exp-jobs", 
         name=f"Train Model ExecId-{args.IdExecution} ExperimentId-{experiment_id}", 
         job_type="train-model", config=config) as run:
         config = wandb.config
@@ -191,7 +191,7 @@ def train_and_log(config,experiment_id='99'):
     
 def evaluate_and_log(experiment_id='99',config=None,):
     
-    with wandb.init(project="MLOps-Pycon2023", name=f"Eval Model ExecId-{args.IdExecution} ExperimentId-{experiment_id}", job_type="eval-model", config=config) as run:
+    with wandb.init(project="Eafit-exp-jobs", name=f"Eval Model ExecId-{args.IdExecution} ExperimentId-{experiment_id}", job_type="eval-model", config=config) as run:
         data = run.use_artifact('mnist-preprocess:latest')
         data_dir = data.download()
         testing_set = read(data_dir, "test")

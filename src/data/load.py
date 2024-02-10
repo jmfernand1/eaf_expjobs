@@ -36,7 +36,7 @@ def load(train_size=.8):
 def load_and_log():
     # 🚀 start a run, with a type to label it and a project it can call home
     with wandb.init(
-        project="MLOps-Pycon2023",
+        project="Eafit-exp-jobs",
         name=f"Load Raw Data ExecId-{args.IdExecution}", job_type="load-data") as run:
         
         datasets = load()  # separate code for loading the datasets

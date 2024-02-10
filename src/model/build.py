@@ -26,7 +26,7 @@ num_classes = 10
 input_shape = 784
 
 def build_model_and_log(config, model, model_name="MLP", model_description="Simple MLP"):
-    with wandb.init(project="MLOps-Pycon2023", 
+    with wandb.init(project="Eafit-exp-jobs", 
         name=f"initialize Model ExecId-{args.IdExecution}", 
         job_type="initialize-model", config=config) as run:
         config = wandb.config

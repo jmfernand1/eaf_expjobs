@@ -22,7 +22,7 @@ if not os.path.exists("./model"):
     os.makedirs("./model")
 
 # Data parameters testing
-num_classes = 10
+num_classes = 15
 input_shape = 784
 
 def build_model_and_log(config, model, model_name="MLP", model_description="Simple MLP"):

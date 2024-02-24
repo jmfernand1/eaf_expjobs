@@ -26,6 +26,7 @@ if not os.path.exists("./model"):
 # Data parameters testing
 num_classes = 15
 input_shape = 784
+# cambio
 
 def build_model_and_log(config, model, model_name="MLP", model_description="Simple MLP"):
     with wandb.init(project="Eafit-exp-jobs", 
